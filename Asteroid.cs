@@ -1,4 +1,6 @@
-﻿namespace Satellites
+﻿using System;
+
+namespace Satellites
 {
     internal class Asteroid
     {
@@ -7,12 +9,11 @@
         private double _y;
         private double _z;
 
-        public Asteroid()
+        public Asteroid(float x, float y, float z)
         {
-            Random random = new Random();
-            _x = random.Next(0, 100);
-            _y = random.Next(0, 100);
-            _z = random.Next(0, 100);
+            _x = x;
+            _y = y;
+            _z = z;
         }
 
         internal double GetDistanceTo(Satellite satellite)
